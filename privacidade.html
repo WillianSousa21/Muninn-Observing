@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aviso de Privacidade do Muninn Observing, protótipo acadêmico local para Diadema.">
+  <title>Aviso de Privacidade | Muninn Observing</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <!-- Navegação principal -->
+    <nav class="navbar navbar-expand-md" aria-label="Navegação principal">
+      <div class="container">
+
+        <a class="navbar-brand brand" href="index.html" aria-label="Muninn Observing, página inicial">
+          <img src="img/logo-augna.svg" alt="" width="72" height="54">
+          <span>
+            <strong>MUNINN</strong>
+            <small>OBSERVING · DIADEMA</small>
+          </span>
+        </a>
+
+        <button class="navbar-toggler" 
+        type="button" data-bs-toggle="collapse" 
+        data-bs-target="#menu-principal" 
+        aria-controls="menu-principal" 
+        aria-expanded="false" 
+        aria-label="Abrir ou fechar menu">
+
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu-principal">
+          <ul class="navbar-nav ms-auto align-items-md-center gap-md-2">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="relatos.html">Mural de relatos</a></li>
+            <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre o projeto</a></li>
+            <!--Essa Opção, quando criada levava a uma página de acessibilidade mas foi descontinuidada, não vou excluir porque pode afetar algo...-->
+            <!-- <li class="nav-item"><a class="nav-link accessibility-link" href="#acessibilidade">Acessibilidade</a></li> -->
+          </ul>
+
+          <a class="btn btn-danger ms-md-3 mt-2 mt-md-0" href="relatos.html#formulario-relato">Registrar informação</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo" class="container page-main legal-main">
+    <div class="page-intro">
+      <p class="eyebrow eyebrow-light">MUNINN OBSERVING · DIADEMA</p>
+      <h1>Aviso de Privacidade</h1>
+      <p>Como as informações deste protótipo são usadas e armazenadas.</p>
+      <p class="legal-updated">Versão de 17 de novembro de 2026.</p>
+    </div>
+
+    <div class="notice-inline" role="note">
+      <strong>Em resumo:</strong> o formulário não pede identificação ou contato.
+       O conteúdo fica no armazenamento desta aba e não é enviado a um servidor do projeto.
+        Use somente informações de fontes públicas e não inclua dados pessoais.
+      </div>
+
+      <!--termo de Privcidade-->
+    <div class="legal-content">
+
+      <section>
+        <h2>1. Responsável e escopo</h2>
+        <p>Muninn Observing é uma atividade acadêmica em protótipo local, sem servidor próprio ou base central de relatos.
+           Esta versão ainda não possui canal de atendimento para solicitações de titulares. 
+           Antes de um lançamento público, o responsável pelo serviço, seus dados de contato e os procedimentos 
+           para atender solicitações deverão ser definidos e publicados.
+          </p>
+      </section>
+
+      <section>
+        <h2>2. Informações processadas</h2>
+        <p>Para organizar uma entrada, o navegador processa tipo de ocorrência,
+           bairro, ponto de referência público, data e horário publicados pela fonte,
+           resumo escrito pelo usuário e endereço da fonte pública.
+            O formulário não solicita nome, telefone, e-mail, documento,
+             localização residencial ou conta.
+        </p>
+
+        <p>O painel de atividades registra localmente o tipo de ação e o bairro associados ao registro.
+           O aceite dos Termos de Uso e deste aviso é verificado para enviar o formulário,
+            mas não é armazenado como um registro separado.
+        </p>
+      </section>
+      
+      <section>
+        <h2>3. Finalidades e armazenamento</h2>
+        <p>Os dados são usados somente para exibir, filtrar, editar e remover informações na interface.
+           O navegador guarda relatos, atividades e preferências de acessibilidade no <code>sessionStorage</code>,
+           associado à aba. O projeto não envia esses campos a um servidor e não os compartilha com outros visitantes.
+        </p>
+        
+        <p>Não inclua dados pessoais ou sigilosos na descrição ou nos links.
+           Qualquer pessoa com acesso ao mesmo perfil e à mesma aba enquanto a sessão
+            estiver aberta poderá ver a tela; o armazenamento do navegador não é um cofre criptografado.
+           Você pode editar ou remover entradas e encerrar a sessão fechando a aba.
+           A restauração de sessões pode variar conforme o navegador.
+        </p>
+      </section>
+      
+      <section>
+        <h2>4. Serviços externos</h2>
+        <p>O Bootstrap é carregado da CDN jsDelivr.
+           Ao abrir as páginas, o navegador faz solicitações ao provedor da CDN,
+           que pode receber dados técnicos da conexão, como endereço IP,
+           navegador e horário da solicitação. Ao abrir um link de fonte,
+           o site de destino também recebe a solicitação normal do navegador.
+           O projeto não inclui ferramenta própria de análise de audiência ou perfilamento.
+        </p>
+      </section>
+      
+      <section>
+        <h2>5. Direitos e limitações</h2>
+        <p>Como esta versão não mantém uma base central nem solicita dados de identificação,
+           ela não consegue localizar registros de uma pessoa em outros dispositivos ou abas.
+           Para corrigir ou remover um registro local, use os controles do mural antes de encerrar a sessão.
+           Se você inserir dado pessoal por engano, remova o registro e encerre a sessão no navegador.
+        </p>
+        
+        <p>O protótipo não oferece um canal para pedidos formais
+           de acesso ou outros direitos previstos na LGPD.
+           Um serviço público real precisaria identificar o controlador,
+           disponibilizar contato e estabelecer procedimentos compatíveis
+           com a legislação aplicável. Consulte a 
+          <a href="https://www.gov.br/anpd/pt-br/assuntos/titular-de-dados/direito-dos-titulares"
+            target="_blank" rel="noopener noreferrer">
+          página da ANPD sobre direitos dos titulares</a> e a 
+          <a href="https://www2.camara.leg.br/legin/fed/lei/2018/lei-13709-14-agosto-2018-787077-normaatualizada-pl.html"
+            target="_blank" rel="noopener noreferrer">LGPD em texto atualizado</a>.
+        </p>
+      </section>
+      
+      <section>
+        <h2>6. Mudanças neste aviso</h2>
+        <p>Este aviso descreve a versão acadêmica atual. 
+          Se o projeto passar a armazenar dados em servidor,
+           compartilhar relatos ou solicitar identificadores,
+           o aviso e os controles precisarão ser revistos antes dessas mudanças.
+        </p>
+      </section>
+      
+      <section>
+        <h2>7. Natureza deste aviso</h2>
+        <p>Este texto é informativo para a atividade acadêmica e não declara conformidade
+           jurídica plena nem substitui uma revisão profissional antes de um serviço em produção.
+        </p>
+      </section>
+    
+    </div>
+    <p class="legal-related">Consulte também os <a href="termos.html">Termos de Uso</a>.</p>
+  </main>
+
+   <footer class="site-footer"> <!--Rodapé do Site-->
+    <div class="container footer-main">
+      <a class="footer-brand" href="index.html">
+        <!--Logo da marca, nessa hora que me arrependo de não ter feito outra versão da logo para fundo preto ;-; -->
+        <img src="img/logo-augna.svg" alt="" width="62"> 
+        <span>
+          <strong>MUNINN OBSERVING</strong>
+          <small>Informação local · Diadema, SP</small>
+        </span>
+      </a>
+
+      <p>Um espaço comunitário para organizar informações sobre riscos em vias e espaços públicos de Diadema.</p>
+    
+    </div>
+
+    <div class="container footer-bottom">
+      <span>Muninn Observing · 2026</span>
+      <nav class="footer-legal" aria-label="Informações legais">
+      <a href="termos.html">Termos de Uso</a>
+      <a href="privacidade.html">Aviso de Privacidade</a>
+      </nav>
+      <span>Este mural não substitui canais oficiais nem serviços de emergência.</span>
+    </div>
+  </footer>
+
+  <!--Barra de acessibilidade, no canto da pagina aqui também serve para habilitar o modo escuro!!!!-->
+  <div class="accessibility-bar" id="acessibilidade" aria-label="Controles de acessibilidade">
+    <span>Tamanho do texto</span>
+    <button type="button" data-font="down" aria-label="Diminuir tamanho do texto">A−</button>
+    <button type="button" data-font="reset" aria-label="Restaurar tamanho padrão do texto">A</button>
+    <button type="button" data-font="up" aria-label="Aumentar tamanho do texto">A+</button>
+    <span class="access-divider" aria-hidden="true"></span>
+    <!--Ativa e Desativa   o modo escuro-->
+    <button type="button" id="btn-tema" aria-pressed="false">◐ <span>Ativar tema escuro</span></button> 
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>
