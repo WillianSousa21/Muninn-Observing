@@ -1,0 +1,299 @@
+<!--Eu FIZ cagada de novo não é possivel que vou ter que revisar isso pela terceira vez, ja perdi mais de 2 horas aqui e vou perder mais!-->
+<!--E lá vamos nos de novo pela terceira vez, dessa vez tem café para revisar tudo, só espero que não acabe antes-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Registre e consulte relatos de ocorrências em vias e espaços públicos de Diadema.">
+  <title>Mural de relatos | Muninn Observing</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <!-- Navegação principal -->
+    <nav class="navbar navbar-expand-md" aria-label="Navegação principal">
+      <div class="container">
+
+        <a class="navbar-brand brand" href="index.html" aria-label="Muninn Observing, página inicial">
+          <img src="img/logo-augna.svg" alt="" width="72" height="54">
+          <span>
+            <strong>MUNINN</strong>
+            <small>OBSERVING · DIADEMA</small>
+          </span>
+        </a>
+
+        <button class="navbar-toggler" 
+        type="button" data-bs-toggle="collapse" 
+        data-bs-target="#menu-principal" 
+        aria-controls="menu-principal" 
+        aria-expanded="false" 
+        aria-label="Abrir ou fechar menu">
+
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu-principal">
+          <ul class="navbar-nav ms-auto align-items-md-center gap-md-2">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="relatos.html">Mural de relatos</a></li>
+            <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre o projeto</a></li>
+            <!--Essa Opção, quando criada levava a uma página de acessibilidade mas foi descontinuidada, não vou excluir porque pode afetar algo...-->
+            <!-- <li class="nav-item"><a class="nav-link accessibility-link" href="#acessibilidade">Acessibilidade</a></li> -->
+          </ul>
+
+          <a class="btn btn-danger ms-md-3 mt-2 mt-md-0" href="relatos.html#formulario-relato">Registrar informação</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main id="conteudo" class="container page-main">
+    <div class="page-intro"><p class="eyebrow eyebrow-light">DIADEMA · SP</p>
+      <h1>Mural de informações</h1>
+      <p>Consulte informações públicas e cadastre um resumo com o link da fonte.</p>
+    </div>
+
+    <!--Essa notificação é exibida antes do formulário de registro, espero que o usuario pelo menos leia-->
+    <div class="notice-inline" role="note"> 
+      <strong>Antes de registrar:</strong> 
+      use somente informações publicadas em uma fonte pública e acessível sem login.
+       Resuma com suas palavras e inclua o link da fonte. 
+       Não publique relatos pessoais, dados de pessoas, placas ou endereços residenciais. 
+       As informações não são verificadas por órgãos públicos.
+      </div>
+
+    <div class="content-grid"> <!--GRID do formulário e pagina-->
+      <section class="form-panel" id="formulario-relato" aria-labelledby="form-titulo">
+
+        <!--Topo do Formulario com avisos-->
+        <div class="panel-heading">
+          <p class="eyebrow eyebrow-light">CONTRIBUIR</p>
+          <h2 id="form-titulo">Registrar informação pública</h2>
+          <p>Os campos com * são obrigatórios. A fonte deve estar disponível publicamente.</p>
+        </div>
+
+        <!-- Formulário de registro -->
+        <form id="form-relato" novalidate> <!--Esses dados são ficticios, não precisa validar!!-->
+          <input type="hidden" id="relato-id">
+
+          <!-- Seleção do tipo de Ocorrência/Informação -->
+          <div class="mb-3"> 
+            <label class="form-label" for="tipo">Tipo de informação <span aria-hidden="true">*</span>
+            </label>
+            <select class="form-select" id="tipo" required>
+              <option value="">Selecione uma opção</option>
+              <option>Alagamento</option>
+              <option>Interdição</option>
+              <option>Deslizamento</option>
+              <option>Incêndio</option>
+              <option>Árvore ou objeto na via</option>
+              <option>Outro risco</option>
+            </select>
+            <div class="invalid-feedback">Selecione o tipo de informação.</div>
+          </div>
+
+          <!--Registro do bairro que foi Afetado -->
+          <div class="mb-3">
+            <label class="form-label" for="bairro">
+              Bairro em Diadema <span aria-hidden="true">*</span>
+            </label>
+
+            <input class="form-control" type="text" 
+            id="bairro" minlength="2" maxlength="60" 
+            required autocomplete="off" 
+            placeholder="Ex.: Centro">
+
+            <div class="form-text">Informe o bairro indicado pela fonte pública.</div>
+            <div class="invalid-feedback">Informe um bairro com pelo menos 2 caracteres.</div>
+          </div>
+
+          <!--Registro do ponto de referência público-->
+          <div class="mb-3">
+            <label class="form-label" for="local">
+              Ponto de referência público <span aria-hidden="true">*</span>
+            </label>
+
+            <input class="form-control" type="text" 
+            id="local" minlength="5" maxlength="120" 
+            required autocomplete="off" 
+            placeholder="Ex.: cruzamento ou equipamento público">
+
+            <div class="invalid-feedback">
+              Informe o local publicado pela fonte.
+            </div>
+          </div>
+          
+          <!--Registro do horário e data-->
+          <div class="mb-3">
+            <label class="form-label" for="observado-em">
+              Data e horário informados pela fonte <span aria-hidden="true">*</span>
+            </label>
+            <input class="form-control" type="datetime-local" id="observado-em" required>
+            <div class="invalid-feedback">Informe a data e o horário publicados pela fonte.</div>
+          </div>
+          
+          <!--Registro resumido da situação do Local / Resumo da informação pública-->
+          <div class="mb-3">
+            <label class="form-label" for="descricao">
+              Resumo da informação pública <span aria-hidden="true">*</span>
+            </label>
+
+            <textarea class="form-control" id="descricao" 
+              rows="4" minlength="15" maxlength="500" 
+              required placeholder="Resuma com suas palavras o que a fonte pública informa.">
+            </textarea>
+          
+            <div class="form-text">
+            <span id="contador-descricao">0</span>/500 caracteres. Não copie a matéria inteira nem inclua dados pessoais.</div>
+            <div class="invalid-feedback">Escreva um resumo entre 15 e 500 caracteres.</div>
+          </div>
+          <!-- Link da fonte pública -->
+          <!--Isso aqui é opcional, nem todo mundo vai ter um link de reportagem, mas pode ser incluído se disponível-->
+          <div class="mb-3">
+            <label class="form-label" for="fonte-url">
+              Link da fonte pública <span aria-hidden="true">(Opcional)</span>
+            </label>
+
+            <input class="form-control" type="url" id="fonte-url" maxlength="2048" autocomplete="url" placeholder="https://">
+            <div class="form-text">Use uma página pública de órgão oficial, jornal ou outra fonte aberta.</div>
+            <div class="invalid-feedback">Informe um endereço público válido iniciado por http:// ou https://.</div>
+          </div>
+
+          <!--O café acabou aqui ;-; volto em 20 minutos para terminar de revisar-->
+          <!-- Os 20 minutos acabou virando 3 horas ;-; -->
+
+          <!--Termos e Privacidade-->
+          <p class="privacy-note">
+            Privacidade: não pedimos nome ou contato. 
+            Os dados ficam apenas nesta aba, não são enviados a um servidor e não aparecem para outros usuários.
+             Leia o <a href="privacidade.html">Aviso de Privacidade</a>.
+            </p>
+          <!--Termos de Uso Check-Box-->
+          <div class="form-check mb-3"><input class="form-check-input" type="checkbox" id="aceite-termos" required>
+
+            <label class="form-check-label" for="aceite-termos">
+              Li e aceito os <a href="termos.html" target="_blank" rel="noopener noreferrer">Termos de Uso</a> 
+              e o <a href="privacidade.html" target="_blank" rel="noopener noreferrer">Aviso de Privacidade</a>.
+               Confirmo que esta informação vem de uma fonte pública.
+              </label>
+
+              <div class="invalid-feedback">É necessário confirmar a leitura dos termos e a origem pública da informação.</div>
+
+            </div>
+          <!--Botões de Ação-->
+          <div class="form-actions">
+            <button class="btn btn-danger" id="btn-salvar" type="submit">Publicar informação pública</button>
+            <button class="btn btn-outline-secondary d-none" id="btn-cancelar" type="button">Cancelar edição</button>
+          </div>
+          
+          <p id="mensagem-formulario" class="form-message" role="status" aria-live="polite"></p>
+
+        </form>
+
+      </section>
+
+      <!--Lista de relatos cadastrados na sessão-->
+       <!--Painel de relatos-->
+      <section class="list-panel" aria-labelledby="lista-titulo">
+        
+        <div class="panel-heading panel-heading-light">
+          <p class="eyebrow eyebrow-light">CONSULTAR</p>
+          <h2 id="lista-titulo">Informações cadastradas</h2>
+          <p id="contador-relatos">Nenhuma informação nesta sessão.</p>
+        </div>
+
+        <!--Filtros de busca por bairro e tipo de informação-->
+        <div class="filters"> 
+          <div><!--Filtro por bairro-->
+            <label class="form-label" for="filtro-bairro">
+              Filtrar por bairro
+            </label>
+            <input class="form-control" id="filtro-bairro" 
+            type="search" placeholder="Digite o bairro">
+          </div>
+
+          <div><!--Filtro por tipo-->
+            <label class="form-label" for="filtro-tipo">Tipo</label>
+            <select class="form-select" id="filtro-tipo">
+              <option value="">Todos</option>
+              <option>Alagamento</option>
+              <option>Interdição</option>
+              <option>Deslizamento</option>
+              <option>Incêndio</option>
+              <option>Árvore ou objeto na via</option>
+              <option>Outro risco</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!--Lista de relatos cadastrados na sessão-->
+        <div id="lista-relatos" class="report-list" aria-live="polite"></div>
+        <!--Os relatos cadastrados na sessão aparecerão aqui e removeração a lista vazia!-->
+        <p id="lista-vazia" class="empty-state">Ainda não há informações cadastradas. As entradas desta sessão aparecerão aqui.</p>
+      </section>
+
+    </div> <!--FIM do GRID do formulário e pagina-->
+
+    <!--Painel de atividades recentes da sessão-->
+    <section class="activity-panel" aria-labelledby="atividade-titulo">
+      <div class="activity-title">
+        <div>
+          <p class="eyebrow eyebrow-light">HISTÓRICO DA SESSÃO</p>
+          <h2 id="atividade-titulo">Atividades recentes</h2>
+        </div>
+
+        <span id="total-atividades" class="activity-count">0 atividades</span>
+      </div>
+      <!--Lista de atividades recentes da sessão aparece aqui-->
+      <div id="painel-atividades" class="activity-list" aria-live="polite"></div>
+      <!--Essa lista some conforme as atividades são adicionadas-->
+      <p id="atividades-vazias" class="empty-state">As ações realizadas nesta sessão serão listadas aqui.</p>
+    </section>
+  </main>
+
+
+  <footer class="site-footer"> <!--Rodapé do Site-->
+    <div class="container footer-main">
+      <a class="footer-brand" href="index.html">
+        <!--Logo da marca, nessa hora que me arrependo de não ter feito outra versão da logo para fundo preto ;-; -->
+        <img src="img/logo-augna.svg" alt="" width="62"> 
+        <span>
+          <strong>MUNINN OBSERVING</strong>
+          <small>Informação local · Diadema, SP</small>
+        </span>
+      </a>
+
+      <p>Um espaço comunitário para organizar informações sobre riscos em vias e espaços públicos de Diadema.</p>
+    
+    </div>
+
+    <div class="container footer-bottom">
+      <span>Muninn Observing · 2026</span>
+      <nav class="footer-legal" aria-label="Informações legais">
+      <a href="termos.html">Termos de Uso</a>
+      <a href="privacidade.html">Aviso de Privacidade</a>
+      </nav>
+      <span>Este mural não substitui canais oficiais nem serviços de emergência.</span>
+    </div>
+  </footer>
+
+  <!--Barra de acessibilidade, no canto da pagina aqui também serve para habilitar o modo escuro!!!!-->
+  <div class="accessibility-bar" id="acessibilidade" aria-label="Controles de acessibilidade">
+    <span>Tamanho do texto</span>
+    <button type="button" data-font="down" aria-label="Diminuir tamanho do texto">A−</button>
+    <button type="button" data-font="reset" aria-label="Restaurar tamanho padrão do texto">A</button>
+    <button type="button" data-font="up" aria-label="Aumentar tamanho do texto">A+</button>
+    <span class="access-divider" aria-hidden="true"></span>
+    <!--Ativa e Desativa   o modo escuro-->
+    <button type="button" id="btn-tema" aria-pressed="false">◐ <span>Ativar tema escuro</span></button> 
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>
