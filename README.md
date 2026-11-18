@@ -65,7 +65,16 @@ Muninn-Observing/
 |-- img/
 |   |-- logo-augna.svg
 |   `-- png/
-|       `-- arquivos .png das capturas
+|       |-- Celular360x800-inicio.png
+|       |-- Celular360x800-Mural.png
+|       |-- Celular360x800-sobre.png
+|       |-- tablet1024x768-inicio.png
+|       |-- tablet1024x768-Forms.png
+|       |-- tablet1024x768-sobre.png
+|       |-- tablet1024x768.png
+|       |-- Desktop1920x1080-inicio.png
+|       |-- Desktop1920x1080-Mural.png
+|       `-- Desktop1920x1080-sobre.png
 `-- README.md
 ```
 
@@ -123,11 +132,13 @@ Os relatos e atividades são guardados no `sessionStorage` da aba atual. Os dado
 
 ## Validação e testes
 
-O projeto deve ser testado nas seguintes larguras:
+As capturas visuais foram registradas nas seguintes resoluções de viewport:
 
-- Celular: 360 px
-- Tablet: 768 px
-- Desktop: 1280 px
+- Celular: 360 × 800 px
+- Tablet: 1024 × 768 px
+- Desktop: 1920 × 1080 px
+
+Os casos funcionais abaixo continuam como roteiro de teste e devem ser executados no navegador antes da entrega.
 
 Casos sugeridos:
 
@@ -144,8 +155,25 @@ Casos sugeridos:
 
 ## Capturas de tela
 
-As imagens das capturas devem ser colocadas em `img/png/`. Ao adicioná-las manualmente, use caminhos relativos no formato `img/png/nome-da-captura.png`.
+As capturas abaixo registram as páginas do projeto nas resoluções solicitadas. Os arquivos originais estão em `img/png/`.
 
+### Celular · 360 × 800
+
+| Início | Mural | Sobre |
+|---|---|---|
+| <img src="img/png/Celular360x800-inicio.png" alt="Página inicial em celular, viewport 360 por 800" width="160"> | <img src="img/png/Celular360x800-Mural.png" alt="Mural em celular, viewport 360 por 800" width="160"> | <img src="img/png/Celular360x800-sobre.png" alt="Página sobre em celular, viewport 360 por 800" width="160"> |
+
+### Tablet · 1024 × 768
+
+| Início | Formulário | Sobre | Captura adicional |
+|---|---|---|---|
+| <img src="img/png/tablet1024x768-inicio.png" alt="Página inicial em tablet, viewport 1024 por 768" width="210"> | <img src="img/png/table1024x768-Forms.png" alt="Formulário em tablet, viewport 1024 por 768" width="210"> | <img src="img/png/tablet1024x768-sobre.png" alt="Página sobre em tablet, viewport 1024 por 768" width="210"> | <img src="img/png/tablet1024x768.png" alt="Captura adicional em tablet, viewport 1024 por 768" width="210"> |
+
+### Desktop · 1920 × 1080
+
+| Início | Mural | Sobre |
+|---|---|---|
+| <img src="img/png/Desktop1920x1080-inicio.png" alt="Página inicial em desktop, viewport 1920 por 1080" width="280"> | <img src="img/png/Desktop1920x1080-Mural.png" alt="Mural em desktop, viewport 1920 por 1080" width="280"> | <img src="img/png/Desktop1920x1080-sobre.png" alt="Página sobre em desktop, viewport 1920 por 1080" width="280"> |
 ## Sustentabilidade e evolução
 
 Uma hipótese de negócio de impacto seria oferecer implantação e suporte do serviço para organizações comunitárias ou instituições públicas, mantendo a consulta gratuita para a população. A versão real exigiria backend, moderação, processo de correção, responsável pelo tratamento dos dados, canal de contato e validação com moradores.
@@ -173,6 +201,6 @@ Sugestão de etapas:
 
 ## Uso de IA e código de terceiros
 
-A geração inicial da estrutura e da documentação contou com auxílio de ferramentas de IA. A implementação e os textos devem ser revisados e declarados no relatório acadêmico.
+A elaboração do projeto e relatório contou com auxílio de IA generativa (ChatGPT/Codex) para estruturação, código e documentação. Sendo revisado para erros de JS, estilização em CSS e documentação. 
 
-O Bootstrap 5.3.3 é carregado pela CDN jsDelivr e possui licença MIT. A logo local `img/logo-augna.svg` integra a identidade visual deste projeto.
+O Bootstrap 5.3.3 é carregado pela CDN jsDelivr e possui licença MIT.
